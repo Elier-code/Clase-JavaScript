@@ -1,0 +1,45 @@
+:root{
+    --verde: green;
+    --gris: gray;
+}
+
+.edu-au-vic-wa-nt-dots {
+  font-family: "Edu AU VIC WA NT Dots", cursive;
+  font-optical-sizing: auto;
+  font-weight: 40px;
+  font-style: normal;
+  color: #fff;
+  text-align: center;
+}
+
+.encabezado {
+    
+    background-color: var(--verde);
+    height: 100px;
+    
+}
+.centrarVericalHorizontal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cuerpo {
+    display: flex;
+    gap: 5px;
+}
+.cuerpo > div {
+    width: 30%;
+    
+    height: 100px;
+    background-color: var(--gris);
+}
+
+@media only screen and (max-width: 600px){
+    .cuerpo{
+        flex-direction: column;
+    }
+    .cuerpo > div {
+        width: 80%;
+        height: 200px;
+    }
+}

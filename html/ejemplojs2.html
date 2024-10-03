@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        meses = ["ENERO", "FEBRERO", "MARZO", "ABRIL", "MAYO", "JUNIO"]
+
+        for (let i = 0; i < meses.length; i++) {
+            console.log(meses[i])
+
+        }
+        mesesDos = []
+        mesesDos[0] = "JULIO"
+        mesesDos[1] = "AGOSTO"
+        mesesDos[2] = "SEPTIEMBRE"
+        mesesDos[3] = "OCTUBRE"
+        mesesDos[4] = "NOVIEMBRE"
+        mesesDos[5] = "DICIEMBRE"
+
+        for (const mes of mesesDos) {
+            console.log(mes)
+        }
+
+        for (const indice in mesesDos) {
+            console.log(indice)
+            console.log(mesesDos[indice])
+        }
+        meses.forEach(mes => {
+            console.log(mes)
+        });
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

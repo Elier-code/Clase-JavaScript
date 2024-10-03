@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        frace = "Hola como estas"
+        contador = 0
+        for (let i = 0; i < frace.length; i++) {
+            if (frace[i].toLowerCase() == "a") {
+                contador++
+            }
+            
+        }
+        console.log("las veces que se repite a en la frace es: " , contador)
+
+        // frace = prompt("Dijite una  Frace").toLowerCase()
+        letraABuscar = "a"
+        contador = 0
+
+        for (let i = 0; i < frace.length; i++) {
+            if (frace[i] == letraABuscar) {
+                contador++
+            }
+            
+        }
+        console.log("las veces que se repite ", letraABuscar , " en la frace es: " , contador)
+
+        frace = "la vida es bella".toLowerCase()
+        vocales = ["a","e","i","o","u"]
+        contador = 0
+
+        for (let i = 0; i < frace.length; i++) {
+            for (const l in vocales) {
+                
+                if (frace[i] == vocales[l]) {
+                    contador++
+                    break
+                }
+            }
+            
+        }
+        console.log("las veces que se repite las vocales en la frace son: " , contador)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
