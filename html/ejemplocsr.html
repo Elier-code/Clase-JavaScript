@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/utilidades.js"></script>
+</head>
+<body>
+    <script>
+        var h1 = document.createElement("h1")
+        var h1Texto = document.createTextNode("Ejemplo CRS")
+        h1.append(h1Texto)
+        document.body.appendChild(h1)
+
+        var p = document.createElement("p")
+        var pTexto = document.createTextNode("Ejemplo que renderiza la pagina en el cliente")
+        p.append(pTexto)
+        document.body.appendChild(p)
+
+    </script>
+    <script>
+        h1 = crearNodoConTexto("h1","Ejemplo CRS")
+        p = crearNodoConTexto("p","Ejemplo que renderiza la pagina en el cliente")
+        adicionarNodoBody(h1)
+        adicionarNodoBody(p)
+        crearImgen("../recursos/imagen/98.webp" , "Primera imagen")
+        ul = crearNodo("ul")
+        liUno = crearNodoConTexto("li","Manzana")
+        liDos = crearNodoConTexto("li","Pera")
+        liTres = crearNodoConTexto("li","Banana")
+        adicionarNodoContenedor(liUno,ul)
+        adicionarNodoContenedor(lidos,ul)
+        adicionarNodoContenedor(litres,ul)
+
+
+        adicionarNodoBody(h1)
+        adicionarNodoBody(p)
+        adicionarNodoBody(h2)
+
+        
+        
+    </script>
+</body>
+</html>
