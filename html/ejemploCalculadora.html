@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        Primer Numero
+        <input type="text" id="primerNumero"><br>
+        Segundo Numero
+        <input type="text" id="segundoNumero"><br>
+        Operacion
+        <select id="operacion">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select><br>
+        Resultado
+        <input type="text" id="resultado"><br>
+        
+    </form>
+    <button onclick="calcular()">Calcular</button>
+    <script>
+        function calcular() {
+            var valorPrimerNumero = parseInt(document.getElementById("primerNumero").value)
+            var valorSegundoNumero = parseInt(document.getElementById("segundoNumero").value)
+            var operacion = document.getElementById("operacion").value 
+            var suma = calcularOperacionPrimerNumeroSegundoNumeroV2(operacion , valorPrimerNumero , valorSegundoNumero)
+
+            document.getElementById("resultado").value = suma
+
+        }
+        function calcularOperacionPrimerNumeroSegundoNumero(operacion , primerNumero , segundoNumero) {
+            if (operacion == "+") {
+                return primerNumero + segundoNumero
+            } else if (operacion == "-") {
+                return primerNumero - segundoNumero
+            }else if (operacion == "*") {
+                return primerNumero * segundoNumero
+            }else if (operacion == "/") {
+                return primerNumero / segundoNumero
+            }
+        }
+        function calcularOperacionPrimerNumeroSegundoNumeroV2(operacion , primerNumero , segundoNumero) {
+            var resultado = null
+            if (operacion == "+") {
+                resultado = primerNumero + segundoNumero
+            } else if (operacion == "-") {
+                resultado = primerNumero - segundoNumero
+            }else if (operacion == "*") {
+                resultado = primerNumero * segundoNumero
+            }else if (operacion == "/") {
+                resultado = primerNumero / segundoNumero
+            }
+            return resultado
+        }
+    </script>
+</body>
+</html>
