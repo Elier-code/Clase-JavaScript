@@ -26,7 +26,7 @@ function agregarDatosPaisesTabla(paises){
 
         } else {
             var elementoLista = document.createElement("li");
-            elementoLista.appendChild(document.createTextNode("no"));
+            elementoLista.appendChild(document.createTextNode("No Tiene"));
             ul.appendChild(elementoLista);
         }
 
