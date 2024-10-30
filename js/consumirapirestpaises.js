@@ -1,10 +1,10 @@
 function consumirAPIPaises(){
     var url = "https://restcountries.com/v3.1/all"
-    fetch(url) 
+    fetch(url)
     .then(respuesta => respuesta.json())
     .then(paises => {
         agregarDatosPaisesTabla(paises)
-        
+
     })
 }
 function agregarDatosPaisesTabla(paises){
@@ -15,20 +15,26 @@ function agregarDatosPaisesTabla(paises){
         var columnaOficial = fila.insertCell(1)
         var columnaEstatus = fila.insertCell(2)
         var columnaCapital = fila.insertCell(3)
-        for (capital in pais.capital) {
-            var ul = document.createElement("ul")
-            var elementoLista = document.createElement("li")
-            //elementoLista.appendChild(paises.capital[capital])
-            ul.appendChild(elementoLista)
-            console.log(paises.capital[capital])
+        var ul = document.createElement("ul")
+        if (Array.isArray(pais.capital)) {
+            for (const capital of pais.capital) {
+                var elementoLista = document.createElement("li")
+                var capitales = document.createTextNode(capital)
+                elementoLista.appendChild(capitales)
+                ul.appendChild(elementoLista)
+            }
+
+        } else {
+            var elementoLista = document.createElement("li");
+            elementoLista.appendChild(document.createTextNode("no"));
+            ul.appendChild(elementoLista);
         }
-        
-        
+
+
         columnaComun.innerHTML = pais.name.common
         columnaOficial.innerHTML = pais.name.official
         columnaEstatus.innerHTML = pais.status
-        columnaCapital.innerHTML = ul
-        
+        columnaCapital.appendChild(ul)
     }
 }
 //capital
